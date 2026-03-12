@@ -13,30 +13,30 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.myapplication.ui.login.PatientLoginActivity;
 
-public class WelcomeActivity extends AppCompatActivity {
+public class PatientChangeDetailsActivity extends AppCompatActivity {
 
-    private Button patientButton;
-
+    private Button saveChangesButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_welcome);
+        setContentView(R.layout.activity_patient_change_details);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-
         });
 
-        patientButton = findViewById(R.id.patientButton);
-        patientButton.setOnClickListener(new View.OnClickListener() {
+        saveChangesButton = findViewById(R.id.saveChangesButton);
+        saveChangesButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WelcomeActivity.this, PatientLoginActivity.class);
-                startActivity(intent);
+                finish();
             }
         });
+
+
+
     }
 }
