@@ -9,16 +9,17 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".ui.login.PatientLoginActivity">
+    tools:context=".ui.login.StaffLoginActivity">
 
     <EditText
-        android:id="@+id/emailBox"
+        android:id="@+id/usernameTextBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="280dp"
-        android:hint="@string/prompt_email"
-        android:inputType="textEmailAddress"
+        android:inputType="text"
         android:selectAllOnFocus="true"
+        android:text="Username"
+        android:textColor="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,31 +43,6 @@
         app:layout_constraintTop_toBottomOf="@+id/passwordBox"
         app:layout_constraintVertical_bias="0.398" />
 
-    <TextView
-        android:id="@+id/forgotPasswordView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="132dp"
-        android:layout_marginTop="24dp"
-        android:text="Forgot Password?"
-        android:textColor="@color/teal"
-        android:textColorLink="@color/teal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordBox" />
-
-    <TextView
-        android:id="@+id/signUpTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="232dp"
-        android:layout_marginTop="156dp"
-        android:text="Sign up"
-        android:textColor="@color/teal"
-        android:textColorLink="@color/teal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordBox"
-        android:inputType="none"/>
-
     <EditText
         android:id="@+id/passwordBox"
         android:layout_width="0dp"
@@ -80,31 +56,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailBox" />
+        app:layout_constraintTop_toBottomOf="@+id/usernameTextBox" />
 
     <TextView
-        android:id="@+id/titleView"
+        android:id="@+id/patientNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
         android:layout_marginTop="68dp"
-        android:text="Patient Login"
+        android:text="Staff Login"
         android:textColor="@color/black"
         android:textColorLink="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="16dp"
-        android:text="Don't have an account?"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

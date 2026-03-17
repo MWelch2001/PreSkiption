@@ -25,7 +25,7 @@
         android:layout_height="200dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="88dp"
-        android:background="@drawable/frame_layout_square"
+        android:background="@drawable/frame_layout_square_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,7 +35,7 @@
         android:layout_height="200dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="340dp"
-        android:background="@drawable/frame_layout_square"
+        android:background="@drawable/frame_layout_square_blue"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,7 +73,7 @@
         android:layout_height="50dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="50dp"
-        android:background="@drawable/frame_layout_square"
+        android:background="@drawable/frame_layout_square_blue"
 
         android:text="Join Queue"
         android:textColor="@color/white"

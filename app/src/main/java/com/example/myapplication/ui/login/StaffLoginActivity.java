@@ -22,29 +22,27 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.myapplication.ui.patient.PatientActivity;
-import com.example.myapplication.ui.patient.PatientSignupActivity;
-import com.example.myapplication.databinding.ActivityPatientLoginBinding;
+import com.example.myapplication.databinding.ActivityStaffLoginBinding;
+import com.example.myapplication.ui.staff.StaffActivity;
 
-public class PatientLoginActivity extends AppCompatActivity {
+public class StaffLoginActivity extends AppCompatActivity {
 
     private LoginViewModel loginViewModel;
-    private ActivityPatientLoginBinding binding;
+    private ActivityStaffLoginBinding binding;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        binding = ActivityPatientLoginBinding.inflate(getLayoutInflater());
+        binding = ActivityStaffLoginBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
         loginViewModel = new ViewModelProvider(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
-        final EditText usernameEditText = binding.emailBox;
+        final EditText usernameEditText = binding.usernameTextBox;
         final EditText passwordEditText = binding.passwordBox;
         final Button loginButton = binding.loginButton;
-        final TextView signUpEditText = binding.signUpTextView;
 
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
@@ -120,18 +118,11 @@ public class PatientLoginActivity extends AppCompatActivity {
             }
         });
 
-        signUpEditText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(PatientLoginActivity.this, PatientSignupActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
-    Intent intent = new Intent(PatientLoginActivity.this, PatientActivity.class);
-    startActivity(intent);
+        Intent intent = new Intent(StaffLoginActivity.this, StaffActivity.class);
+        startActivity(intent);
     }
 
     private void showLoginFailed(@StringRes Integer errorString) {

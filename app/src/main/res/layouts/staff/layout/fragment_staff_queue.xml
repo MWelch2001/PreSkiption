@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.staff.staff_queue.StaffQueueFragment">
+
+    <TextView
+        android:id="@+id/staffQueueTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="16dp"
+        android:text="Patient Queue"
+        android:textColor="@color/black"
+        android:textColorLink="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="350dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="28dp"
+        android:background="@drawable/frame_layout_square_blue"
+        android:icon="@drawable/ic_account_blue_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/staffQueueTitle">
+
+    </SearchView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tempButton"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/frame_layout_square_teal"
+        android:lineSpacingExtra="8sp"
+        android:text="Status"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        tools:ignore="MissingConstraints" />
+
+    <ListView
+        android:id="@+id/patientListView"
+        style="@style/Widget.AppCompat.Light.ListView.DropDown"
+        android:layout_width="358dp"
+        android:layout_height="491dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

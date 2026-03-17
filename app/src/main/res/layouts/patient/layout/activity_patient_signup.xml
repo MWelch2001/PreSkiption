@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PatientSignupActivity">
+    tools:context=".ui.patient.PatientSignupActivity">
 
     <EditText
         android:id="@+id/emailAddressText"
@@ -112,13 +112,13 @@
         app:layout_constraintTop_toBottomOf="@+id/phoneText"
         android:contentDescription="Enter Password"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/saveChangesButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/frame_layout_square"
+        android:background="@drawable/frame_layout_square_blue"
         android:text="Sign up"
         android:textColor="@color/white"
         android:textSize="25sp"

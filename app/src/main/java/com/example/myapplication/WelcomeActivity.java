@@ -12,10 +12,12 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.myapplication.ui.login.PatientLoginActivity;
+import com.example.myapplication.ui.login.StaffLoginActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
 
     private Button patientButton;
+    private Button staffButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,16 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WelcomeActivity.this, PatientLoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        staffButton = findViewById(R.id.staffButton);
+        staffButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WelcomeActivity.this, StaffLoginActivity.class);
                 startActivity(intent);
             }
         });

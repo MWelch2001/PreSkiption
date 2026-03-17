@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PatientSignupActivity">
+    tools:context=".ui.patient.PatientSignupActivity">
 
     <TextView
         android:id="@+id/patientSignupTitle"
@@ -13,12 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="116dp"
         android:layout_marginTop="40dp"
-        android:text="Patient Sign Up"
+        android:text="Change Details"
         android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/lastNameText"
@@ -99,13 +99,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/phoneText" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/saveChangesButton"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="88dp"
-        android:background="@drawable/frame_layout_square"
+        android:background="@drawable/frame_layout_square_blue"
         android:text="Save Changes"
         android:textColor="@color/white"
         android:textSize="25sp"

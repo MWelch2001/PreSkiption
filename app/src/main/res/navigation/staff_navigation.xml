@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/staff_navigation"
+    app:startDestination="@+id/staff_navigation_dashboard">
+
+    <fragment
+        android:id="@+id/staff_navigation_dashboard"
+        android:name="com.example.myapplication.ui.staff.staff_dashboard.StaffDashboardFragment"
+        android:label="Dashboard" />
+
+    <fragment
+        android:id="@+id/staff_navigation_queue"
+        android:name="com.example.myapplication.ui.staff.staff_queue.StaffQueueFragment"
+        android:label="Queue" />
+
+    <fragment
+        android:id="@+id/staff_navigation_account"
+        android:name="com.example.myapplication.ui.staff.staff_account.StaffAccountFragment"
+        android:label="Account"
+        tools:layout="@layout/fragment_staff_account" />
+</navigation>

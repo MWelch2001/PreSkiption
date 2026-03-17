@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.staff.StaffViewPrescriptionActivity">
+
+    <TextView
+        android:id="@+id/patientNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="84dp"
+        android:text="Patient Full Name"
+        android:textColor="@color/black"
+        android:textColorLink="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/patientQueuePosText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="116dp"
+        android:text="Patient Pos"
+        android:textColor="@color/black"
+        android:textColorLink="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/frame_layout_square_blue"
+        android:lineSpacingExtra="8sp"
+        android:text="Prescription Status:"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientNameText" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/statusButton"
+        android:layout_width="175dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/frame_layout_square_teal"
+        android:lineSpacingExtra="8sp"
+        android:text="Status"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/patientNameText" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="380dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="228dp"
+        android:background="@drawable/frame_layout_square_blue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

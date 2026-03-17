@@ -1,6 +1,5 @@
-package com.example.myapplication;
+package com.example.myapplication.ui.patient;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +10,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.example.myapplication.ui.login.PatientLoginActivity;
+import com.example.myapplication.R;
 
 public class PatientChangeDetailsActivity extends AppCompatActivity {
 
