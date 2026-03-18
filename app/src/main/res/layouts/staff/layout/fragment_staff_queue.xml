@@ -10,7 +10,7 @@
         android:id="@+id/staffQueueTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
+        android:layout_marginStart="112dp"
         android:layout_marginTop="16dp"
         android:text="Patient Queue"
         android:textColor="@color/black"
@@ -24,7 +24,7 @@
         android:id="@+id/searchView"
         android:layout_width="350dp"
         android:layout_height="43dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="16dp"
         android:background="@drawable/frame_layout_square_blue"
         android:icon="@drawable/ic_account_blue_24dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,12 +50,16 @@
 
     <ListView
         android:id="@+id/patientListView"
-        style="@style/Widget.AppCompat.Light.ListView.DropDown"
         android:layout_width="358dp"
-        android:layout_height="491dp"
-        android:layout_marginStart="24dp"
+        android:layout_height="450dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
+        android:background="@drawable/frame_layout_square_blue"
+        android:divider="@color/black"
+        android:dividerHeight="1dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

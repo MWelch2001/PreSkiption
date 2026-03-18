@@ -1,16 +1,14 @@
 package com.example.myapplication.ui.staff.staff_queue;
 
-import static androidx.databinding.DataBindingUtil.setContentView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -21,14 +19,13 @@ import com.example.myapplication.databinding.FragmentStaffQueueBinding;
 import com.example.myapplication.ui.staff.StaffViewPrescriptionActivity;
 import com.example.myapplication.ui.staff.staff_queue.StaffQueueViewModel;
 
-import java.util.ArrayList;
 
 public class StaffQueueFragment extends Fragment {
 
     private FragmentStaffQueueBinding binding;
-    ArrayList<String> patientNames = new ArrayList<>();
     private ListView patientListView;
     private Button tempButton;
+    private SearchView searchView;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -37,16 +34,16 @@ public class StaffQueueFragment extends Fragment {
 
         binding = FragmentStaffQueueBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        populateListView();
 
         patientListView = root.findViewById(R.id.patientListView);
         tempButton = root.findViewById(R.id.tempButton);
+        searchView = root.findViewById(R.id.searchView);
+
 
         tempButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, patientNames);
-                patientListView.setAdapter(adapter);
+                staffQueueViewModel.PopulateView(getActivity(), patientListView);
             }
         });
 
@@ -57,16 +54,22 @@ public class StaffQueueFragment extends Fragment {
                 StaffQueueFragment.this.startActivity(intent);
             }
         });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextChange(String query) {
+                        staffQueueViewModel.FilterListView(getActivity() ,patientListView, query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+        });
         return root;
     }
 
-    private void populateListView() {
-
-        patientNames.add("Patient 1");
-        patientNames.add("Patient 2");
-        patientNames.add("Patient 3");
-        patientNames.add("Patient 4");
-    }
 
     @Override
     public void onDestroyView() {

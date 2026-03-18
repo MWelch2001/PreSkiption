@@ -30,7 +30,6 @@ public class StaffActivity extends AppCompatActivity {
                 R.id.staff_navigation_dashboard, R.id.staff_navigation_queue, R.id.staff_navigation_account)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_staff);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
     }
 
